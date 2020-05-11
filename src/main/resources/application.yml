@@ -1,0 +1,28 @@
+spring:
+    application:
+        name: admin-service
+    cloud:
+      nacos:
+        discovery:
+          server-addr: 120.26.184.125:8848
+          port: 9999
+          ip: 39.105.82.150
+server:
+    port: 9999 #启动端口
+
+info.groupId: @project.groupId@
+info.artifactId: @project.artifactId@
+info.version: @project.version@
+
+
+#开启端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  security:
+    enabled: false
+  endpoint:
+    health:
+      show-details: ALWAYS
